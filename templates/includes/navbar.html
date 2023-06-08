@@ -35,7 +35,7 @@
     <div class="row align-items-center">
         <div class="col-lg-2 col-md-3 col-6">
             <a href="./" class="brand-wrap">
-            <!-- <img class="logo" src="{% static './images/logo.png' %}"> -->
+            <img class="logo" src="https://github.com/shojan01/images/blob/main/logo3.png?raw=true">
             </a> <!-- brand-wrap.// -->
         </div>
         <div class="col-lg col-sm col-md col-6 flex-grow-0">
@@ -44,10 +44,10 @@
                     <i class="fa fa-bars"></i> Filtrar
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Playeras y tops </a>
-                    <a class="dropdown-item" href="#">Pants y pantaloneras </a>
-                    <a class="dropdown-item" href="#">chamarras y sudaderas</a>
-                    <a class="dropdown-item" href="#">Accesorios </a>
+                    <a class="dropdown-item" href="{% url 'store' %}">Todos los productos</a>          
+                    {% for category in links %}
+                    <a class="dropdown-item" href="{{ category.get_url }}">{{ category.category_name }}</a>
+                    {% endfor %}
                 </div>
             </div>  <!-- category-wrap.// -->
         </div> <!-- col.// -->

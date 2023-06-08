@@ -9,7 +9,7 @@
 <div class="container">
 
 <div class="intro-banner-wrap">
-	<img src="{% static 'images/banners/banner.jpg' %}" class="img-fluid rounded">
+	<img src="https://github.com/shojan01/images/blob/main/banner2.png?raw=true" class="img-fluid rounded">
 </div>
 
 </div> <!-- container // -->
@@ -27,81 +27,19 @@
 </header>
 
 <div class="row">
+	{% for product in products %}
 	<div class="col-md-3">
 		<div class="card card-product-grid">
-			<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/items/NOMBRE DE LA IMAGEN CON EXTENSION' %}"> </a>
+			<a href="{{ product.get_url }}" class="img-wrap"> <img src="{{ product.images.url }}"> </a>
 			<figcaption class="info-wrap">
-				<a href="./product-detail.html" class="title">Nombre del producto</a>
-				<div class="price mt-1">$179.00</div>
+				<a href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
+				<div class="price mt-1">$ {{ product.price }}</div>
 			</figcaption>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card card-product-grid">
-		<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/items/NOMBRE DE LA IMAGEN CON EXTENSION' %}"> </a>
-		<figcaption class="info-wrap">
-		<a href="./product-detail.html" class="title">Nombre del producto</a>
-		<div class="price mt-1">$280.00</div>
-		</figcaption>
-		</div>
+	{% endfor %}
 	</div>
-	<div class="col-md-3">
-		<div class="card card-product-grid">
-		<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/items/NOMBRE DE LA IMAGEN CON EXTENSION' %}"> </a>
-		<figcaption class="info-wrap">
-		<a href="./product-detail.html" class="title">Nombre del producto</a>
-		<div class="price mt-1">$130.00</div>
-		</figcaption>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="card card-product-grid">
-		<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/items/NOMBRE DE LA IMAGEN CON EXTENSION' %}"> </a>
-		<figcaption class="info-wrap">
-		<a href="./product-detail.html" class="title">Nombre del producto</a>
-		<div class="price mt-1">$220.00</div>
-		</figcaption>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-3">
-		<div class="card card-product-grid">
-			<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/items/NOMBRE DE LA IMAGEN CON EXTENSION' %}"> </a>
-			<figcaption class="info-wrap">
-				<a href="./product-detail.html" class="title">Nombre del producto</a>
-				<div class="price mt-1">$179.00</div>
-			</figcaption>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="card card-product-grid">
-		<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/items/NOMBRE DE LA IMAGEN CON EXTENSION' %}"> </a>
-		<figcaption class="info-wrap">
-		<a href="./product-detail.html" class="title">Nombre del producto</a>
-		<div class="price mt-1">$280.00</div>
-		</figcaption>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="card card-product-grid">
-		<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/items/NOMBRE DE LA IMAGEN CON EXTENSION' %}"> </a>
-		<figcaption class="info-wrap">
-		<a href="./product-detail.html" class="title">Nombre del producto</a>
-		<div class="price mt-1">$130.00</div>
-		</figcaption>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="card card-product-grid">
-		<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/items/NOMBRE DE LA IMAGEN CON EXTENSION' %}"> </a>
-		<figcaption class="info-wrap">
-		<a href="./product-detail.html" class="title">Nombre del producto</a>
-		<div class="price mt-1">$220.00</div>
-		</figcaption>
-		</div>
-	</div>
-</div>
+	
 
 </div>
 </section>
