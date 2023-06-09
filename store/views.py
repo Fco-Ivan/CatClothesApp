@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product
+from .models import Product,Order
+from django.http import JsonResponse
+import json
 from category.models import Category
 
 # Create your views here.
