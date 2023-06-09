@@ -49,9 +49,9 @@
                 </div> 
             </div>
         </div> <!-- row.// -->
+        
         <div class="row">
-          <h2>Mensaje y dirección de correo:</h2>
-            <p>{{ mensaje }}</p>
+          <h2>{{ mensaje }}</h2>
             <div class="item-option-select">
                 <h6>Select Size</h6>
                 <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
@@ -69,7 +69,9 @@
                   </label>
                 </div> 
             </div>
+            
         </div> <!-- row.// -->
+        
         <hr>
     
         <!-- aqui va el boton de paypal -->
@@ -116,9 +118,25 @@
                 <div class="col-md-9">
     
         <header class="section-heading">
-            <h3>Customer Reviews </h3>  
+            <h3>Reseñas del producto: </h3>  
             
         </header>
+
+        <form action="" method="POST">
+          {% csrf_token %}
+          <h5>Escribe una Reseña</h5>
+          <div>
+            Titulo de la reseña:
+            <input type="text" class="form-control" name="subject">
+            <br>
+            Reseña:
+            <textarea name="review" rows="4" class="form-control"></textarea>
+            <br>
+            <input type="submit" value="Submit Review" class="btn btn-primary">
+          </div>
+
+        </form>
+<br>
     
         <article class="box mb-3">
             <div class="icontext w-100">
@@ -131,7 +149,7 @@
             </div> <!-- icontext.// -->
             <div class="mt-3">
                 <p>
-                    Dummy comment Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip
                 </p>	
