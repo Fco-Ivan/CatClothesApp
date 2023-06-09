@@ -17,4 +17,4 @@ def logout(request):
 def mostrar_correo(request):
     correo = "alu.18131214@correo.itlalaguna.edu.mx"
     mensaje = f"La confirmacion del pedido se enviara a: {correo}"
-    return render(request, 'mostrar_correo.html', {'mensaje': mensaje})
+    return render(request, 'product_detail.html', {'mensaje': mensaje})
