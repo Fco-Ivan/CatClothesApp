@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-#from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('', views.store, name='store'),
@@ -8,4 +8,4 @@ urlpatterns = [
     path('<slug:category_slug>/<slug:product_slug>/', views.product_detail, name='product_detail'),
 ]
 
-#urlpatterns += staticfiles_urlpatterns()
+urlpatterns += staticfiles_urlpatterns()
