@@ -93,7 +93,7 @@ AUTH_USER_MODEL = 'accounts.Account'
 
 DATABASES = {
 
-    'default': dj_database_url.parse('postgres://proyectopila2bd_user:NVP5zmpXclYGMEHlMvspArpgTuh6bv92@dpg-ci1hfh1mbg50ci1t0h40-a.oregon-postgres.render.com/proyectopila2bd')
+    'default': dj_database_url.parse(env('DATABASE_URL'))
 
 }
 
