@@ -2,7 +2,7 @@ FROM python:3.11.4
 
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /app
+WORKDIR /CatClothesApp
 
 RUN  apk update \
 	&& apk add --no-cache gcc musl-dev postgresql-dev python3-dev libffi-dev \
